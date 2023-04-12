@@ -43,22 +43,23 @@ public class HrGetRequests {
         @Test
         public void test2(){
 
-            Response response = get("/regions/2");
+                Response response = given().accept(ContentType.JSON)
+                            .when().get("/regions/2");
 
+
+            //verify status code
             Assertions.assertEquals(200, response.statusCode());
 
+            //verify content type
             Assertions.assertEquals("application/json", response.contentType());
 
             response.prettyPrint();
 
+            //verify body contains Americas
             Assertions.assertTrue(response.body().asString().contains("Americas"));
 
 
         }
-
-
-
-
 
 
 
