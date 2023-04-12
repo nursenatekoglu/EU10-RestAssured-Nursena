@@ -48,7 +48,7 @@ public class HrGetRequests {
 
 
             //verify status code
-            Assertions.assertEquals(200, response.statusCode());
+            assertEquals(200, response.statusCode());
 
             //verify content type
             Assertions.assertEquals("application/json", response.contentType());
