@@ -56,9 +56,11 @@ public class HamcrestMatchersApiTest {
                 .accept(ContentType.JSON)
                 .and()
                 .pathParam("id",3)
-                .when()
+
+        .when()
                 .get("https://api.training.cydeo.com/teacher/{id}")
-                .then()
+
+        .then()
                 .statusCode(200)
                 .and()
                 .contentType("application/json;charset=UTF-8")
@@ -75,14 +77,15 @@ public class HamcrestMatchersApiTest {
     @DisplayName("GET request to teacher/all and chaining")
     @Test
     public void teachersTest(){
-
         //verify Valter, Mario, Porter inside the all teachers
 
         given()
                 .accept(ContentType.JSON)
-                .when()
+
+        .when()
                 .get("https://api.training.cydeo.com/teacher/all")
-                .then()
+
+        .then()
                 .statusCode(200)
                 .and()
                 .body("teachers.firstName",hasItems("Valter","Mario","Porter"));
