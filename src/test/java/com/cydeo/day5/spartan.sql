@@ -1,0 +1,2 @@
+select * from SPARTANS
+WHERE SPARTAN_ID= 15;
