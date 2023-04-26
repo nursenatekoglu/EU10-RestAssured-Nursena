@@ -30,6 +30,7 @@ public class JsonSchemaValidationTest extends SpartanAuthTestBase {
 
     }
 
+
     @DisplayName("GET request to all spartans and verify schema")
     @Test
     public void allSpartanSchemaTest(){
@@ -45,6 +46,8 @@ public class JsonSchemaValidationTest extends SpartanAuthTestBase {
                 .body(JsonSchemaValidator.matchesJsonSchema(new File("src/test/java/com/cydeo/day10/allSpartansSchema.json")));
 
     }
+
+
 
     //homework
     //put your post json schema under day10
