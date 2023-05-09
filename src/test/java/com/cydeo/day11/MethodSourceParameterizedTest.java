@@ -14,7 +14,6 @@ public class MethodSourceParameterizedTest {
     public void testPrintNames(String name){
 
         System.out.println("name = " + name);
-
     }
 
 
@@ -27,12 +26,16 @@ public class MethodSourceParameterizedTest {
 
         List<String> nameList = Arrays.asList("Parvin","Nasim","mohamad","Nadir","Saim","Gurhan","Murodil");
         return  nameList;
-
     }
 
 
+    public static List<Map<String,String>> getExcelData(){
+        //get your file object
+        ExcelUtil vytrackFile = new ExcelUtil("src/test/resources/Vytracktestdata.xlsx","QA3-all");
+        //return sheet as a list of map
+        return vytrackFile.getDataList();
 
-
+    }
 
 
     @ParameterizedTest
